@@ -43,7 +43,7 @@ export const TransactionsProvider = ({ children }) => {
         const transactionsContract = createEthereumContract();
 
         const availableTransactions =
-          await transactionsContract.getAllTransactions();
+          await transactionsContract.getTransactions();
 
         const structuredTransactions = availableTransactions.map(
           (transaction) => ({
